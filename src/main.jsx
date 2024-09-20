@@ -7,7 +7,7 @@ import axios from 'axios';
 const options = {
   method: 'GET',
   url: 'https://online-movie-database.p.rapidapi.com/auto-complete',
-  params: {q: 'john wick'},
+  params: {q: 'matrix'},
   headers: {
     'x-rapidapi-key': 'cb71281a97msh036212d3e3bc848p18e3e2jsn541ec39839d0',
     'x-rapidapi-host': 'online-movie-database.p.rapidapi.com'
@@ -15,7 +15,7 @@ const options = {
 };
 
 try {
-	const response = axios.request(options);
+	const response = await axios.request(options);
 	console.log(response.data);
 } catch (error) {
 	console.error(error);
